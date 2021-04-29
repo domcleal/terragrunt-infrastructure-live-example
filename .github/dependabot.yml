@@ -1,0 +1,22 @@
+version: 2
+updates:
+- package-ecosystem: terraform
+  directory: "/non-prod/us-east-1/qa/webserver-cluster"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: gruntwork-io/terragrunt-infrastructure-modules-example
+    versions:
+    - 0.4.0
+    - 0.5.0
+- package-ecosystem: terraform
+  directory: "/non-prod/us-east-1/qa/mysql"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: gruntwork-io/terragrunt-infrastructure-modules-example
+    versions:
+    - 0.4.0
+    - 0.5.0
